@@ -36,3 +36,13 @@ def test_with_input_one():
     input_value = 1
     expected_result = []
     assert generate_prime_factors(input_value) == expected_result
+
+
+def test_with_input_two():
+    """
+    Test if generate_prime_factor() function returns the list [2]
+    when 2 is the argument passed.
+    """
+    input_value = 2
+    expected_result = [2]
+    assert generate_prime_factors(input_value) == expected_result
