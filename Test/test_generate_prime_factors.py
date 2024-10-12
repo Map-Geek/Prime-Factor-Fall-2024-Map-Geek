@@ -46,3 +46,13 @@ def test_with_input_two():
     input_value = 2
     expected_result = [2]
     assert generate_prime_factors(input_value) == expected_result
+
+
+def test_with_input_three():
+    """
+    Test if generate_prime_factor() function returns the list [3]
+    when called with 3.
+    """
+    input_value = 3
+    expected_result = [3]
+    assert generate_prime_factors(input_value) == expected_result

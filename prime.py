@@ -29,8 +29,7 @@ def generate_prime_factors(number):
     if not isinstance(number, int) or isinstance(number, bool):
         raise ValueError("The input value must be an integer")
 
-    if number == 1:
-        return []
-
-    if number == 2:
+    # Return number that is a prime factor if greater than 1 otherwise return empty list
+    if number > 1:
         return [number]
+    return []
