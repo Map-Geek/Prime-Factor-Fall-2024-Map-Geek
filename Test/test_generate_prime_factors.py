@@ -26,3 +26,13 @@ def test_datatype_not_integer():
         generate_prime_factors(2.4)
     with pytest.raises(ValueError):
         generate_prime_factors(True)
+
+
+def test_with_input_one():
+    """
+    Test if generate_prime_factors() function returns an empty list []
+    when argument passed is 1.
+    """
+    input_value = 1
+    expected_result = []
+    assert generate_prime_factors(input_value) == expected_result

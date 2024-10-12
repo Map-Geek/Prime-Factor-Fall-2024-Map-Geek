@@ -27,3 +27,6 @@ def generate_prime_factors(number):
     """
     if not isinstance(number, int) or isinstance(number, bool):
         raise ValueError("The input value must be an integer")
+
+    if number == 1:
+        return []
