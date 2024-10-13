@@ -29,16 +29,15 @@ def generate_prime_factors(number):
     if not isinstance(number, int) or isinstance(number, bool):
         raise ValueError("The input value must be an integer")
 
-    divisor = 2  # set divisor to 2 (the smallest prime number)
+    prime_factors = []  # Initialise an empty list to store prime factors
+    divisor = 2  # Set divisor to 2 (the smallest prime number)
 
-    # Check number is greater than 1, if true number is either prime factor or composite
-    # Check if number is even (divisible by 2), compute the quotient if even
-    # Ensure trivial factors are not returned so check quotient is greater than 1
-    # If the number is not divisible by 2, return the number itself otherwise return an empty list
+    # Check if number is even (divisible by 2), if divisible update the number and
+    # add divisor 2 which is a prime factor to the prime factors list
+    # If there is any number left greater than 1, it is also a prime factor so add it to the list
+    if number % divisor == 0:
+        number = number // divisor
+        prime_factors.append(divisor)
     if number > 1:
-        if number % divisor == 0:
-            quotient = number // divisor
-            if quotient > 1:
-                return [divisor, quotient]
-        return [number]
-    return []
+        prime_factors.append(number)
+    return prime_factors
