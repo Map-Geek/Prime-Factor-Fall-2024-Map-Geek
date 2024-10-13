@@ -86,3 +86,13 @@ def test_with_input_eight():
     input_value = 8
     expected_result = [2, 2, 2]
     assert generate_prime_factors(input_value) == expected_result
+
+
+def test_with_input_nine():
+    """
+    Test if generate_prime_factor() function returns the list [3, 3]
+    when called with 9.
+    """
+    input_value = 9
+    expected_result = [3, 3]
+    assert generate_prime_factors(input_value) == expected_result
